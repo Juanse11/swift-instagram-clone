@@ -9,20 +9,21 @@
 /* Begin PBXBuildFile section */
 		0D1E60C323ADE6C00036251E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60C223ADE6C00036251E /* AppDelegate.swift */; };
 		0D1E60C523ADE6C00036251E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60C423ADE6C00036251E /* SceneDelegate.swift */; };
-		0D1E60C723ADE6C00036251E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60C623ADE6C00036251E /* FirstViewController.swift */; };
+		0D1E60C723ADE6C00036251E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60C623ADE6C00036251E /* PostViewController.swift */; };
 		0D1E60C923ADE6C00036251E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60C823ADE6C00036251E /* SecondViewController.swift */; };
 		0D1E60CC23ADE6C00036251E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60CA23ADE6C00036251E /* Main.storyboard */; };
 		0D1E60CE23ADE6C20036251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60CD23ADE6C20036251E /* Assets.xcassets */; };
 		0D1E60D123ADE6C20036251E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60CF23ADE6C20036251E /* LaunchScreen.storyboard */; };
 		0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60D823ADED280036251E /* PostTableViewCell.swift */; };
 		0D1E60DB23ADED280036251E /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60D923ADED280036251E /* PostTableViewCell.xib */; };
+		0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D1E60BF23ADE6C00036251E /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1E60C223ADE6C00036251E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D1E60C423ADE6C00036251E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0D1E60C623ADE6C00036251E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		0D1E60C623ADE6C00036251E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0D1E60C823ADE6C00036251E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0D1E60CB23ADE6C00036251E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D1E60CD23ADE6C20036251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		0D1E60D223ADE6C20036251E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1E60D823ADED280036251E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		0D1E60D923ADED280036251E /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		0D1E60C123ADE6C00036251E /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60E023ADF4A10036251E /* Utils */,
 				0D1E60DF23ADEDC70036251E /* Controllers */,
 				0D1E60DE23ADEDC10036251E /* Models */,
 				0D1E60DC23ADED4F0036251E /* Posts */,
@@ -79,7 +82,7 @@
 		0D1E60DC23ADED4F0036251E /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				0D1E60C623ADE6C00036251E /* FirstViewController.swift */,
+				0D1E60C623ADE6C00036251E /* PostViewController.swift */,
 				0D1E60DD23ADED8D0036251E /* TableView */,
 			);
 			path = Posts;
@@ -90,6 +93,7 @@
 			children = (
 				0D1E60D823ADED280036251E /* PostTableViewCell.swift */,
 				0D1E60D923ADED280036251E /* PostTableViewCell.xib */,
+				0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -106,6 +110,13 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D1E60E023ADF4A10036251E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,8 +191,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */,
 				0D1E60C923ADE6C00036251E /* SecondViewController.swift in Sources */,
-				0D1E60C723ADE6C00036251E /* FirstViewController.swift in Sources */,
+				0D1E60C723ADE6C00036251E /* PostViewController.swift in Sources */,
 				0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */,
 				0D1E60C323ADE6C00036251E /* AppDelegate.swift in Sources */,
 				0D1E60C523ADE6C00036251E /* SceneDelegate.swift in Sources */,

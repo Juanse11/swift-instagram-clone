@@ -7,52 +7,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="PostViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VwF-QN-h2q">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-3z-F7n">
+                                <rect key="frame" x="0.0" y="64" width="414" height="50"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-3z-F7n">
-                                        <rect key="frame" x="144.5" y="0.0" width="125.5" height="50"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swiftagram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeC-9d-qke">
-                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="zq5-Ub-6A4"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oLu-vf-jyl">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="719"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swiftagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeC-9d-qke">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="zq5-Ub-6A4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oLu-vf-jyl">
+                                <rect key="frame" x="0.0" y="107" width="414" height="706"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="eP0-PT-OOe"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="N2n-5c-Uug"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="VwF-QN-h2q" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="d68-MJ-3iq"/>
-                            <constraint firstItem="VwF-QN-h2q" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="ktt-7p-u3p"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="VwF-QN-h2q" secondAttribute="trailing" id="qkW-QM-nJE"/>
+                            <constraint firstItem="oLu-vf-jyl" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="4rQ-hD-Xka"/>
+                            <constraint firstItem="oLu-vf-jyl" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="63" id="FFx-Q4-Hex"/>
+                            <constraint firstItem="oLu-vf-jyl" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="LlD-kg-pQP"/>
+                            <constraint firstItem="oLu-vf-jyl" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="bLQ-e2-i4O"/>
+                            <constraint firstItem="FEh-3z-F7n" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="gHH-In-9gI"/>
+                            <constraint firstItem="FEh-3z-F7n" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="20" id="kMd-Kv-h4T"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="FEh-3z-F7n" secondAttribute="trailing" id="xmM-nE-iVb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="postTableView" destination="oLu-vf-jyl" id="OjG-gB-hsb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">
