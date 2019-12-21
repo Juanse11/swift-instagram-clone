@@ -11,12 +11,10 @@ import UIKit
 extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(111)
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(222)
         return 20
     }
     
@@ -35,7 +33,6 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     //    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(69)
         let cell: PostTableViewCell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         cell.profilePictureImageView.layer.cornerRadius = cell.profilePictureImageView.frame.width/2.0
         cell.usernameLabel.text = "juansestrada"
