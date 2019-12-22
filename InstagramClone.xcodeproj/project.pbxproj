@@ -17,6 +17,11 @@
 		0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60D823ADED280036251E /* PostTableViewCell.swift */; };
 		0D1E60DB23ADED280036251E /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60D923ADED280036251E /* PostTableViewCell.xib */; };
 		0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */; };
+		0D1E60E823AF3EC70036251E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E60E523AF3EC70036251E /* Alamofire.framework */; };
+		0D1E60E923AF3EC70036251E /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E60E623AF3EC70036251E /* Kingfisher.framework */; };
+		0D1E60EA23AF3EC70036251E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E60E723AF3EC70036251E /* ObjectMapper.framework */; };
+		0D1E60EC23AF3FBE0036251E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60EB23AF3FBD0036251E /* Post.swift */; };
+		0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60ED23AF41EC0036251E /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		0D1E60D823ADED280036251E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		0D1E60D923ADED280036251E /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewControllerDelegate.swift; sourceTree = "<group>"; };
+		0D1E60E523AF3EC70036251E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		0D1E60E623AF3EC70036251E /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
+		0D1E60E723AF3EC70036251E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = SOURCE_ROOT; };
+		0D1E60EB23AF3FBD0036251E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0D1E60ED23AF41EC0036251E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1E60EA23AF3EC70036251E /* ObjectMapper.framework in Frameworks */,
+				0D1E60E923AF3EC70036251E /* Kingfisher.framework in Frameworks */,
+				0D1E60E823AF3EC70036251E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +77,7 @@
 		0D1E60C123ADE6C00036251E /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60E323AF3E060036251E /* Frameworks */,
 				0D1E60E023ADF4A10036251E /* Utils */,
 				0D1E60DF23ADEDC70036251E /* Controllers */,
 				0D1E60DE23ADEDC10036251E /* Models */,
@@ -101,6 +115,8 @@
 		0D1E60DE23ADEDC10036251E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60EB23AF3FBD0036251E /* Post.swift */,
+				0D1E60ED23AF41EC0036251E /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +135,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		0D1E60E323AF3E060036251E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60E523AF3EC70036251E /* Alamofire.framework */,
+				0D1E60E623AF3EC70036251E /* Kingfisher.framework */,
+				0D1E60E723AF3EC70036251E /* ObjectMapper.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,6 +155,7 @@
 				0D1E60BB23ADE6C00036251E /* Sources */,
 				0D1E60BC23ADE6C00036251E /* Frameworks */,
 				0D1E60BD23ADE6C00036251E /* Resources */,
+				0D1E60E423AF3E1D0036251E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -186,16 +213,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D1E60E423AF3E1D0036251E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D1E60BB23ADE6C00036251E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */,
+				0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */,
 				0D1E60C923ADE6C00036251E /* SecondViewController.swift in Sources */,
 				0D1E60C723ADE6C00036251E /* PostViewController.swift in Sources */,
 				0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */,
 				0D1E60C323ADE6C00036251E /* AppDelegate.swift in Sources */,
+				0D1E60EC23AF3FBE0036251E /* Post.swift in Sources */,
 				0D1E60C523ADE6C00036251E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9QNHPN6D9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InstagramClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,6 +416,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V9QNHPN6D9;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InstagramClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

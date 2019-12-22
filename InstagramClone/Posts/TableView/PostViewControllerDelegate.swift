@@ -37,6 +37,9 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
         cell.profilePictureImageView.layer.cornerRadius = cell.profilePictureImageView.frame.width/2.0
         cell.usernameLabel.text = "liverpoolfc"
         cell.locationLabel.text = "Khalifa International Stadium"
+        let attributedText = NSMutableAttributedString(string: "liverpoolfc ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .semibold)])
+        attributedText.append(NSMutableAttributedString(string: "Simply amazing 🥺❤ A surprise bedroom transformation for two deserving brothers, with a little help from", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)]))
+        cell.descriptionLabel.attributedText = attributedText
         return cell
         
     }

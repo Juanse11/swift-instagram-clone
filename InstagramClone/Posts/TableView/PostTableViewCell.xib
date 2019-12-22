@@ -234,6 +234,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="descriptionLabel" destination="cP1-XK-Y3I" id="w9T-WQ-Un0"/>
                 <outlet property="locationLabel" destination="UDG-0N-km7" id="CRY-YE-avk"/>
                 <outlet property="profilePictureImageView" destination="BVP-bz-EYE" id="9wx-hi-gxc"/>
                 <outlet property="usernameLabel" destination="FoG-yf-SqP" id="tQn-cS-n4K"/>
