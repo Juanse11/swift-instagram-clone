@@ -44,10 +44,19 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
         cell.postImageView.kf.setImage(with: url)
         let attributedText = NSMutableAttributedString(string: "liverpoolfc ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .semibold)])
         attributedText.append(NSMutableAttributedString(string: post.caption, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)]))
+       
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 0
+        formatter.groupingSeparator = "."
+        let numberOfLikes = formatter.string(from: NSNumber(value: post.numberOfLikes))
+        cell.numberOfLikesLabel.text = "\(numberOfLikes ?? "0") likes"
+        
         cell.descriptionLabel.attributedText = attributedText
         
         url = URL(string: userProfile.profilePicURL)
         cell.profilePictureImageView.kf.setImage(with: url)
+        
         return cell
         
     }

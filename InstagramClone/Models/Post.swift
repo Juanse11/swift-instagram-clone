@@ -12,7 +12,7 @@ struct Post: Mappable {
     public var id: String = ""
     public var caption: String = ""
     public var pictureURL: String = ""
-    public var numberOfLikes: String = ""
+    public var numberOfLikes: Int = 0
     
     init?(map: Map) { }
     public init() {}
