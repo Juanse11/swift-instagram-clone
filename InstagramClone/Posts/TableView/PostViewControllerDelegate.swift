@@ -19,12 +19,12 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return UITableView.automaticDimension
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
-    }
+//    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 40
+//    }
     
     //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     //        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "exampleSectionView") as! ExampleSectionView
@@ -35,8 +35,8 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostTableViewCell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
         cell.profilePictureImageView.layer.cornerRadius = cell.profilePictureImageView.frame.width/2.0
-        cell.usernameLabel.text = "juansestrada"
-        cell.locationLabel.text = "Barranquilla, Colombia"
+        cell.usernameLabel.text = "liverpoolfc"
+        cell.locationLabel.text = "Khalifa International Stadium"
         return cell
         
     }

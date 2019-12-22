@@ -21,6 +21,7 @@ class PostViewController: UIViewController {
     func config() {
         postTableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "postTableViewCell")
         postTableView.estimatedRowHeight = 100
+        postTableView.separatorStyle = .none
     }
 
 
