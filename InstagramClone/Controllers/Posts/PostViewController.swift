@@ -12,9 +12,19 @@ class PostViewController: UIViewController {
 
     @IBOutlet weak var postTableView: UITableView!
     
+    var userProfileStore = UserProfileStore()
+    var userProfile = UserProfile()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
+        userProfileStore.fetchUsers { (userProfile) in
+            if let userProfile = userProfile {
+                self.userProfile = userProfile
+                self.postTableView.reloadData()
+            }
+        }
+        
         // Do any additional setup after loading the view.
     }
     

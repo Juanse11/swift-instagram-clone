@@ -11,12 +11,14 @@ import ObjectMapper
 struct UserProfile: Mappable {
     public var posts: [Post] = []
     public var username: String = ""
+    public var profilePicURL: String = ""
     
     init?(map: Map) { }
     public init() {}
     mutating func mapping(map: Map) {
         posts <- map["graphql.user.edge_owner_to_timeline_media.edges"]
         username <- map["graphql.user.username"]
+        profilePicURL <- map["graphql.user.profile_pic_url"]
     }
     
     

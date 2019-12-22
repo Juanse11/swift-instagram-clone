@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var profilePictureImageView: UIImageView!
+    @IBOutlet weak var numberOfLikesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -15,7 +15,7 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return userProfile.posts.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -34,12 +34,20 @@ extension PostViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostTableViewCell = tableView.dequeueReusableCell(withIdentifier: "postTableViewCell", for: indexPath) as! PostTableViewCell
+    
+        let post = userProfile.posts[indexPath.row]
+        
         cell.profilePictureImageView.layer.cornerRadius = cell.profilePictureImageView.frame.width/2.0
         cell.usernameLabel.text = "liverpoolfc"
         cell.locationLabel.text = "Khalifa International Stadium"
+        var url = URL(string: post.pictureURL)
+        cell.postImageView.kf.setImage(with: url)
         let attributedText = NSMutableAttributedString(string: "liverpoolfc ", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .semibold)])
-        attributedText.append(NSMutableAttributedString(string: "Simply amazing 🥺❤ A surprise bedroom transformation for two deserving brothers, with a little help from", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)]))
+        attributedText.append(NSMutableAttributedString(string: post.caption, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)]))
         cell.descriptionLabel.attributedText = attributedText
+        
+        url = URL(string: userProfile.profilePicURL)
+        cell.profilePictureImageView.kf.setImage(with: url)
         return cell
         
     }

@@ -22,6 +22,7 @@
 		0D1E60EA23AF3EC70036251E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D1E60E723AF3EC70036251E /* ObjectMapper.framework */; };
 		0D1E60EC23AF3FBE0036251E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60EB23AF3FBD0036251E /* Post.swift */; };
 		0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60ED23AF41EC0036251E /* UserProfile.swift */; };
+		0D1E60F223AF47000036251E /* UserProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60F123AF47000036251E /* UserProfileStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		0D1E60E723AF3EC70036251E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = SOURCE_ROOT; };
 		0D1E60EB23AF3FBD0036251E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0D1E60ED23AF41EC0036251E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0D1E60F123AF47000036251E /* UserProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,11 @@
 		0D1E60C123ADE6C00036251E /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60EF23AF46DF0036251E /* Stores */,
 				0D1E60E323AF3E060036251E /* Frameworks */,
 				0D1E60E023ADF4A10036251E /* Utils */,
 				0D1E60DF23ADEDC70036251E /* Controllers */,
 				0D1E60DE23ADEDC10036251E /* Models */,
-				0D1E60DC23ADED4F0036251E /* Posts */,
 				0D1E60C223ADE6C00036251E /* AppDelegate.swift */,
 				0D1E60C423ADE6C00036251E /* SceneDelegate.swift */,
 				0D1E60C823ADE6C00036251E /* SecondViewController.swift */,
@@ -124,6 +126,7 @@
 		0D1E60DF23ADEDC70036251E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60DC23ADED4F0036251E /* Posts */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +146,22 @@
 				0D1E60E723AF3EC70036251E /* ObjectMapper.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D1E60EF23AF46DF0036251E /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60F023AF46E40036251E /* UserProfileStore */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		0D1E60F023AF46E40036251E /* UserProfileStore */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60F123AF47000036251E /* UserProfileStore.swift */,
+			);
+			path = UserProfileStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +262,7 @@
 			files = (
 				0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */,
 				0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */,
+				0D1E60F223AF47000036251E /* UserProfileStore.swift in Sources */,
 				0D1E60C923ADE6C00036251E /* SecondViewController.swift in Sources */,
 				0D1E60C723ADE6C00036251E /* PostViewController.swift in Sources */,
 				0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */,

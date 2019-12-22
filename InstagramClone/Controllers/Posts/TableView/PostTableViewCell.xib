@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postTableViewCell" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="InstagramClone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wam-Gn-ASY">
-                        <rect key="frame" x="0.0" y="10" width="320" height="680"/>
+                        <rect key="frame" x="0.0" y="10" width="320" height="480"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SHS-yP-Drd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
@@ -81,13 +81,13 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testpost" translatesAutoresizingMaskIntoConstraints="NO" id="lS5-NG-GPy">
-                                <rect key="frame" x="0.0" y="91.333333333333314" width="320" height="320"/>
+                                <rect key="frame" x="0.0" y="41.333333333333343" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lS5-NG-GPy" secondAttribute="height" multiplier="1:1" id="Q4Q-2o-pBc"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aV2-6G-7tr">
-                                <rect key="frame" x="0.0" y="472.66666666666669" width="320" height="25"/>
+                                <rect key="frame" x="0.0" y="372.66666666666669" width="320" height="25"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X61-0n-ZM1">
                                         <rect key="frame" x="0.0" y="0.0" width="289" height="25"/>
@@ -186,7 +186,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zsJ-F5-Rdb">
-                                <rect key="frame" x="0.0" y="559" width="320" height="13"/>
+                                <rect key="frame" x="0.0" y="409" width="320" height="13"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="418.046 likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crK-d4-nN0">
                                         <rect key="frame" x="10" y="0.0" width="310" height="13"/>
@@ -207,7 +207,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="el1-sZ-Lmi">
-                                <rect key="frame" x="0.0" y="633.33333333333337" width="320" height="46.666666666666629"/>
+                                <rect key="frame" x="0.0" y="433.33333333333331" width="320" height="46.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simply amazing 🥺❤ A surprise bedroom transformation for two deserving brothers, with a little help from" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-XK-Y3I">
                                         <rect key="frame" x="10" y="0.0" width="310" height="46.666666666666664"/>
@@ -236,6 +236,8 @@
             <connections>
                 <outlet property="descriptionLabel" destination="cP1-XK-Y3I" id="w9T-WQ-Un0"/>
                 <outlet property="locationLabel" destination="UDG-0N-km7" id="CRY-YE-avk"/>
+                <outlet property="numberOfLikesLabel" destination="crK-d4-nN0" id="glV-56-5kt"/>
+                <outlet property="postImageView" destination="lS5-NG-GPy" id="EIx-Sc-RKI"/>
                 <outlet property="profilePictureImageView" destination="BVP-bz-EYE" id="9wx-hi-gxc"/>
                 <outlet property="usernameLabel" destination="FoG-yf-SqP" id="tQn-cS-n4K"/>
             </connections>

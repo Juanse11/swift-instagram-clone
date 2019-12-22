@@ -12,6 +12,7 @@ struct Post: Mappable {
     public var id: String = ""
     public var caption: String = ""
     public var pictureURL: String = ""
+    public var numberOfLikes: String = ""
     
     init?(map: Map) { }
     public init() {}
@@ -19,6 +20,7 @@ struct Post: Mappable {
         id <- map["node.id"]
         caption <- map["node.edge_media_to_caption.edges.0.node.text"]
         pictureURL <- map["node.display_url"]
+        numberOfLikes <- map["node.edge_liked_by.count"]
     }
     
     
