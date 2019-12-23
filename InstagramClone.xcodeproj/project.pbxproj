@@ -23,6 +23,10 @@
 		0D1E60EC23AF3FBE0036251E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60EB23AF3FBD0036251E /* Post.swift */; };
 		0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60ED23AF41EC0036251E /* UserProfile.swift */; };
 		0D1E60F223AF47000036251E /* UserProfileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60F123AF47000036251E /* UserProfileStore.swift */; };
+		0D1E60FB23B004AF0036251E /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60FA23B004AF0036251E /* FormViewController.swift */; };
+		0D1E610023B019340036251E /* PostProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E60FE23B019340036251E /* PostProfileTableViewCell.swift */; };
+		0D1E610123B019340036251E /* PostProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1E60FF23B019340036251E /* PostProfileTableViewCell.xib */; };
+		0D1E610323B085980036251E /* IntShortFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1E610223B085980036251E /* IntShortFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		0D1E60EB23AF3FBD0036251E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0D1E60ED23AF41EC0036251E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0D1E60F123AF47000036251E /* UserProfileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileStore.swift; sourceTree = "<group>"; };
+		0D1E60FA23B004AF0036251E /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		0D1E60FE23B019340036251E /* PostProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfileTableViewCell.swift; sourceTree = "<group>"; };
+		0D1E60FF23B019340036251E /* PostProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostProfileTableViewCell.xib; sourceTree = "<group>"; };
+		0D1E610223B085980036251E /* IntShortFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntShortFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		0D1E60DC23ADED4F0036251E /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E60F623AFF8400036251E /* Form */,
 				0D1E60C623ADE6C00036251E /* PostViewController.swift */,
 				0D1E60DD23ADED8D0036251E /* TableView */,
 			);
@@ -107,8 +116,8 @@
 		0D1E60DD23ADED8D0036251E /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				0D1E60D823ADED280036251E /* PostTableViewCell.swift */,
-				0D1E60D923ADED280036251E /* PostTableViewCell.xib */,
+				0D1E60FD23B019000036251E /* PostProfileTableViewCell */,
+				0D1E60FC23B018EA0036251E /* PostTableViewCell */,
 				0D1E60E123ADF6410036251E /* PostViewControllerDelegate.swift */,
 			);
 			path = TableView;
@@ -134,6 +143,7 @@
 		0D1E60E023ADF4A10036251E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0D1E610223B085980036251E /* IntShortFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +172,32 @@
 				0D1E60F123AF47000036251E /* UserProfileStore.swift */,
 			);
 			path = UserProfileStore;
+			sourceTree = "<group>";
+		};
+		0D1E60F623AFF8400036251E /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60FA23B004AF0036251E /* FormViewController.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		0D1E60FC23B018EA0036251E /* PostTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60D823ADED280036251E /* PostTableViewCell.swift */,
+				0D1E60D923ADED280036251E /* PostTableViewCell.xib */,
+			);
+			path = PostTableViewCell;
+			sourceTree = "<group>";
+		};
+		0D1E60FD23B019000036251E /* PostProfileTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D1E60FE23B019340036251E /* PostProfileTableViewCell.swift */,
+				0D1E60FF23B019340036251E /* PostProfileTableViewCell.xib */,
+			);
+			path = PostProfileTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1E610123B019340036251E /* PostProfileTableViewCell.xib in Resources */,
 				0D1E60D123ADE6C20036251E /* LaunchScreen.storyboard in Resources */,
 				0D1E60CE23ADE6C20036251E /* Assets.xcassets in Resources */,
 				0D1E60CC23ADE6C00036251E /* Main.storyboard in Resources */,
@@ -261,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D1E60E223ADF6410036251E /* PostViewControllerDelegate.swift in Sources */,
+				0D1E610323B085980036251E /* IntShortFormatter.swift in Sources */,
+				0D1E610023B019340036251E /* PostProfileTableViewCell.swift in Sources */,
 				0D1E60EE23AF41EC0036251E /* UserProfile.swift in Sources */,
 				0D1E60F223AF47000036251E /* UserProfileStore.swift in Sources */,
 				0D1E60C923ADE6C00036251E /* SecondViewController.swift in Sources */,
@@ -268,6 +307,7 @@
 				0D1E60DA23ADED280036251E /* PostTableViewCell.swift in Sources */,
 				0D1E60C323ADE6C00036251E /* AppDelegate.swift in Sources */,
 				0D1E60EC23AF3FBE0036251E /* Post.swift in Sources */,
+				0D1E60FB23B004AF0036251E /* FormViewController.swift in Sources */,
 				0D1E60C523ADE6C00036251E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

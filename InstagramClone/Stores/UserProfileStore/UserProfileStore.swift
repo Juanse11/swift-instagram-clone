@@ -10,10 +10,10 @@ import ObjectMapper
 import Alamofire
 
 struct UserProfileStore {
-    var baseURL = "https://www.instagram.com/liverpoolfc/?__a=1"
+    var baseURL = "https://www.instagram.com"
     
-    func fetchUsers(_ completion: @escaping(_ users: UserProfile?) -> Void ) {
-        AF.request("\(baseURL)", method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+    func fetchUser(_ username: String, _ completion: @escaping(_ users: UserProfile?) -> Void ) {
+        AF.request("\(baseURL)/\(username)/?__a=1", method: .get, encoding: JSONEncoding.default).validate().responseJSON { (response) in
             if let value = response.value as? [String: Any] {
                 let users = Mapper<UserProfile>().map(JSON: value)
                 DispatchQueue.main.async {
